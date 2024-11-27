@@ -2,8 +2,8 @@ defaults:
   - train
   - _self_
 
-N0: 50
-N_b: 50
+N0: 20
+N_b: 20
 N_f: 10_000
 
 time_domain:
@@ -63,11 +63,11 @@ net:
 
 trainer:
   accelerator: gpu
-  max_epochs: 30000
+  max_epochs: 1000
   devices:
       - 0
   deterministic: false
-  check_val_every_n_epoch: 30001
+  check_val_every_n_epoch: 1001
 
 model:
   loss_fn: mse
